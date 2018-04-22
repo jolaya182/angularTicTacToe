@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="style" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <main ng-app="ticTacToeApp" ng-controller="ticTacToeCtrl" class="board" id="board">
+    <table class="container" id="container">
+      <tr class="row" ng-repeat="x in board track by $index ">
+        <td class="col-md-4 box" ng-repeat="c in x track by $index" ng-click="getPosition({x:$parent.$index, y:$index})">
+          {{c }} ({{$parent.$index}}, {{$index}})
+        </td>
+      </tr>
+    </table>
+  </main>
+  
+</body>
+</html>
