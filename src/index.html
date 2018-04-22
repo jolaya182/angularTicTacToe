@@ -15,7 +15,7 @@
     <table class="container" id="container">
       <tr class="row" ng-repeat="x in board track by $index ">
         <td class="col-md-4 box" ng-repeat="c in x track by $index" ng-click="getPosition({x:$parent.$index, y:$index})">
-          {{c }} ({{$parent.$index}}, {{$index}})
+          {{ c }} 
         </td>
       </tr>
     </table>

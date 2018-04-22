@@ -29,7 +29,7 @@ controller("ticTacToeCtrl", ["$scope",function($scope){
           $scope.gameEnded = true;
         }
       if($scope.player != "X") $scope.player ="X";
-        else $scope.player = "Y";  
+        else $scope.player = "O";  
 
     }else{
       alert("Game ended player "+ $scope.player + " won!");
