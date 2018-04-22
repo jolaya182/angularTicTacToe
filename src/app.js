@@ -21,6 +21,7 @@ controller("ticTacToeCtrl", ["$scope",function($scope){
         if(checkWinner($scope.player)){
           alert("the winner is: "+ $scope.player);
           $scope.gameEnded = true;
+          return;
         } 
       }
 
@@ -35,6 +36,7 @@ controller("ticTacToeCtrl", ["$scope",function($scope){
       alert("Game ended player "+ $scope.player + " won!");
     }//end of if
   }//end of function
+
 
   function isAvailable(cord){
     return $scope.board[cord.x][cord.y] == "_"? true: false; 
